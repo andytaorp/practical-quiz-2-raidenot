@@ -7,6 +7,7 @@ function App() {
 
   const handleAddTask = (newTask) => {
     // TODO: write code to add a new task
+    setTasks([...tasks, newTask]);
   };
 
   const handleToggleTask = (id) => {
@@ -15,13 +16,14 @@ function App() {
 
   const handleDeleteTask = (id) => {
     // TODO: write code to delete a task
+    setTasks(tasks.filter((task) => task.id !== id));
   };
 
   return (
     <div className="app">
       <h1>Task Tracker</h1>
-      {/*TODO: add a form to add a new task*/}
-      {/*TODO: add a list of tasks*/}
+      {/*TODO: add a form to add a new task*/ <Form />}
+      {/*TODO: add a list of tasks*/<TaskList />}
     </div>
   );
 }
